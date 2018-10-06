@@ -13,12 +13,14 @@ public class Guitar {
     @Column(name = "serialnumber", nullable = false, length = 100)
     private String serialNumber;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "builder", nullable = false, length = 100)
     private Builder builder;
 
     @Column(name = "model", nullable = false, length = 100)
     private String model;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "type", nullable = false, length = 100)
     private Type type;
 

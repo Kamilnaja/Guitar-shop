@@ -1,1 +1,2 @@
-insert into guitars(id, serialNumber, builder, model, type) values (1, '0001', 'Fender', 'Stratocaster', 'Electric');
+insert into guitars (id, serialnumber, builder, model, type)
+values (1, '001', 'FENDER', 'Telecaster', 'ELECTRIC');
