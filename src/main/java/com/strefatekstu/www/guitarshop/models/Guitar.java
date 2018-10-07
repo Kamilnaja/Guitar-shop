@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 public class Guitar {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "serialnumber", nullable = false, length = 100)
