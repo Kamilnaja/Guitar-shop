@@ -27,8 +27,7 @@ public class Guitar {
     public Guitar() {
     }
 
-    public Guitar(String serialNumber, Builder builder, String model, Type type) {
-        this.serialNumber = serialNumber;
+    public Guitar(Builder builder, String model, Type type) {
         this.builder = builder;
         this.model = model;
         this.type = type;

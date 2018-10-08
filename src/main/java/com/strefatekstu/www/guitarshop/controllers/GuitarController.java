@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin
 @Controller
 public class GuitarController {
 
@@ -27,12 +28,14 @@ public class GuitarController {
         return guitarRepository.findById(id);
     }
 
+    @ResponseBody
     @RequestMapping(value = "/guitars", method = RequestMethod.POST)
-    public List<Guitar> addGuitar(Guitar guitar) {
+    public List<Guitar> addGuitar(@RequestBody Guitar guitar) {
         guitarRepository.save(guitar);
         return guitarRepository.findAll();
     }
 
+    @ResponseBody
     @RequestMapping(value = "/guitars/{id}", method = RequestMethod.DELETE)
     public List<Guitar> removeGuitar(@PathVariable("id") Integer id) {
         guitarRepository.deleteById(id);
